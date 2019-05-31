@@ -1,0 +1,21 @@
+<h1 [hidden]='!ready' style="text-align: center;">Abilities</h1>
+<p></p>
+<div [hidden]='!ready' class="mat-elevation-z8">
+  <br>
+  <div class="container-fluid ">
+    <div class="row">
+      <div *ngFor="let ability of pokemonAbilities | orderBy:'slot'" class="col-12 col-lg-6 mb-4">
+        <div class="mat-elevation-z2" style="border-radius: 20px;height: 100%;">
+          <div style="padding:15px;">
+            <h3>{{ability.name}} #{{ability.id}}</h3>
+            <h4><span *ngIf='ability.secret' class="badge badge-secondary">Secret</span> </h4>
+            <div style="margin:10px;">
+              <h6 style="text-align:justify;">{{ability.description}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>

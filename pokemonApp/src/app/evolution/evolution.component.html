@@ -1,0 +1,20 @@
+
+<h1 [hidden]='!dataReady' style="text-align: center;">Family</h1>
+<p></p>
+<div [hidden]='!dataReady' class="mat-elevation-z8">
+
+  <div class="container-fluid ">
+    <mat-grid-list [cols]="breakpoint" rowHeight="300px" style='text-align: center;' (window:resize)="onResize($event)">
+
+      <mat-grid-tile *ngFor="let pokemon of family| orderBy:'id'" >
+        <div [id]='pokemon.id' (click)='click(pokemon.id)' (mouseover)='over(pokemon.id)' (mouseout)='out(pokemon.id)'>
+          <img [src]='pokemon.img' height="250" width="250">
+          <h3>{{pokemon.name}} #{{pokemon.id}}</h3>
+        </div>
+
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <p></p>
+</div>
+<br>

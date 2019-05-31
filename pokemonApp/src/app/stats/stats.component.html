@@ -1,0 +1,30 @@
+<h1 [hidden]='!ready' style="text-align: center;">Stats</h1>
+<p></p>
+<div [hidden]='!ready' class="mat-elevation-z8 ">
+
+  <div class="container-fluid ">
+
+    <mat-grid-list *ngFor="let stat of stats" cols="7" rowHeight="70px">
+      <mat-grid-tile style="text-align: center;" [colspan]="2" [rowspan]="1">
+        <h4>{{stat.stat.name}}</h4>
+      </mat-grid-tile>
+      <mat-grid-tile style="text-align: center;" [colspan]="1" [rowspan]="1">
+        <h4>{{stat.base_stat}}</h4>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <mat-progress-bar 
+        [class.color-1]="stat.color.one"
+        [class.color-2]="stat.color.two"
+        [class.color-3]="stat.color.three"
+        [class.color-4]="stat.color.four"
+        [class.color-5]="stat.color.five"
+        [class.color-6]="stat.color.six"
+        [class.color-7]="stat.color.seven"
+        [class.color-8]="stat.color.eight"
+        [class.color-9]="stat.color.nine" mode="determinate" value={{stat.value}}></mat-progress-bar>
+
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
+<br>
