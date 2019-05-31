@@ -59,3 +59,7 @@ J'ai également ajouté la possibilité de cliquer sur une image dans cette cha�
 ## La liste des attaques
 
 Ce composant s'appelle moves-list et est probablement le plus complet techniquement de mon projet. Il utilise un tableau de angular material et regroupe toutes les attaques pouvant être connues par le pokémon, avec leur id, le nom, le type et la puissance de l'attaque, ajoute la possibilité de trier ce tableau comme on le souhaite (id,type,nom ou puissance), et permet d'accroître la capacité du tableau si on souhaite afficher plus d'attaque (10 - 25 - 50) et permet de naviguer dans un système de page tout en gardant l'ordre sélectionné.
+
+# Conclusion
+
+Pour conclure, ce pokédex permet de rechercher un pokémon par son nom, et de donner de nombreux détails sur celui-ci. On sélectionne le pokémon et l'application lance alors une requête vers l'api qui renvoie les données qui sont alors transférées au travers de notre service de transfert. Chaque composant récupère alors ces données et les traite en fonction de leurs besoins, puis requête de nouveau l'api si nécessaire. On trouve alors des informations quant aux nom, id, types, images, mais aussi attaques, statistiques, talents et famille des pokémons.
