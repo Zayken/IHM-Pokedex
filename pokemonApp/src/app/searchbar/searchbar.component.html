@@ -1,6 +1,6 @@
-<div *ngIf="dataReady" class="container-fluid ">
+<div *ngIf="dataReady" class="container-fluid center mat-elevation-z8 ">
   <div class="row">
-    <div class="col-12 col-sm-6 col-md-4">
+    <div class="col-12 col-md-6">
       <form (ngSubmit)="clickButtonGo()" class="example-form">
         <mat-form-field class="example-full-width">
           <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
@@ -13,17 +13,15 @@
         <p-button type='submit' label="Go"></p-button>
       </form>
     </div>
-    <div class="col-12 col-sm-6 col-md-4" >
+    <div class="col-12 col-md-6 " >
       <br>
-      <div id='alert'  style='display:none' class="alert alert-danger">
+      <div id='alert'  style='display:none;z-index:2;' class="alert alert-danger">
         Please select an existing pokemon !
       </div>
     </div>
 
   </div>
   
-  <br>
-
   
   
   <!--
